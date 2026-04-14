@@ -1,0 +1,23 @@
+# Stream ingestion
+streamlink
+yt-dlp
+ 
+# Frame processing
+opencv-python
+numpy
+ 
+# Backend API + WebSockets
+fastapi
+uvicorn[standard]
+websockets
+ 
+# Gemini (vision + LLM)
+google-generativeai
+ 
+# Database (Supabase/PostgreSQL)
+supabase
+psycopg2-binary
+ 
+# Utilities
+python-dotenv
+aiohttp
