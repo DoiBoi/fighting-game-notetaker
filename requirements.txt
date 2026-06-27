@@ -1,0 +1,8 @@
+# Essential stuff
+numpy
+
+# Vision stuff
+opencv-python
+
+# Stream stuff
+streamlink
