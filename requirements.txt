@@ -1,5 +1,7 @@
 # Essential stuff
 numpy
+Pillow
+matplotlib
 
 # Vision stuff
 opencv-python

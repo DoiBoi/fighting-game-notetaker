@@ -1,5 +1,5 @@
 import numpy as np
-from streamlink import Streamlink
+from streamlink.session.session import Streamlink
 import cv2
 
 class Reader:
@@ -22,18 +22,18 @@ class StreamReader(Reader):
     def __init__(self, url):
         self.url = url
         self.stream = Streamlink()
-    
+
     def read(self):
         pass
 
-    
-    
+
+
 class ImageReader(Reader):
     pass
-    
+
 class DesktopReader(Reader):
     pass
 
 class VideoReader(Reader):
     pass
-    
+

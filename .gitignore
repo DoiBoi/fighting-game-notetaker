@@ -1,0 +1,4 @@
+# Ignore auto-generated cache files
+__pycache__
+*.mp4
+frames/
