@@ -1,17 +1,14 @@
 import unittest as ut
 import numpy as np
 from PIL import Image
-import matplotlib.pyplot as plt
 
 from Parser import Parser
+from HelperFunctions import *
 
 class TestParser(ut.TestCase):
-    TEST_IMAGE = np.array(Image.open("data_handling/SF6_ROI.png"))
-
-    def _show_image(self, image, title=""):
-        plt.title(title)
-        plt.imshow(image)
-        plt.show()
+    TEST_IMAGE_1 = Image.open("data_handling/test_images/BoundedTestImage.png")
+    TEST_IMAGE_2 = Image.open("data_handling/test_images/BlankTestImage.jpg")
+    TEST_TEMPLATE = Image.open("data_handling/test_images/TestTemplate.jpg")
 
     def test_parse_data(self):
         self.assertTrue(True)
@@ -34,12 +31,19 @@ class TestParser(ut.TestCase):
         }
 
         parser = Parser()
-        returned_rois = parser.crop_regions(self.TEST_IMAGE, test_rois)
+        returned_rois = parser.crop_regions(np.array(self.TEST_IMAGE_1), test_rois)
 
         # Checks if the top left pixel and the bottom right pixel are the same in the ROI of the original and the cropped ROI
         for roi_name in returned_rois.keys():
-            self._show_image(returned_rois[roi_name], roi_name)     # Displays the cropped ROIs
-            self.assertListEqual(list(returned_rois[roi_name][0, 0]), list(self.TEST_IMAGE[test_rois[roi_name][2], test_rois[roi_name][0]]))
+            show_image(returned_rois[roi_name], roi_name)     # Displays the cropped ROIs
+            self.assertListEqual(list(returned_rois[roi_name][0, 0]), list(np.array(self.TEST_IMAGE_1)[test_rois[roi_name][2], test_rois[roi_name][0]]))
+
+    def test_find_template(self):
+        parser = Parser()
+        matches = parser.find_template(self.TEST_IMAGE_2.convert("L"), self.TEST_TEMPLATE.convert("L"), 0)
+        display_bounding_boxes(self.TEST_IMAGE_2, matches)
+
+        self.assertTrue(True)
 
     def test_parse_bar_percentage(self):
         self.assertTrue(True)

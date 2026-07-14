@@ -1,4 +1,6 @@
 import numpy as np
+from PIL import Image
+from HelperFunctions import *
 
 class Parser:
     def parse_data(self, data: np.ndarray):
@@ -98,3 +100,34 @@ class Parser:
         """
 
         return []
+
+    def find_template(self, image: Image.Image, template: Image.Image, threshold: float) -> list[np.ndarray]:
+        """Finds bounding boxes in the given PIL image where the given template PIL image is. False positives are filtered out by the threshold value.
+
+        Requires the image and template to be in B&W (a 2D array)
+
+        Args:
+            image (Image.Image): The PIL image to find the template in.
+            template (Image.Image): The template (a PIL image) to check for.
+            threshold (float): The detection threshold.
+
+        Returns:
+            list[np.ndarray]: A list of bounding boxes where the template was found and had a similarity higher than the threshold.
+        """
+        template_h, template_w = np.array(template).shape[:2]
+
+        # Find matches at each level and draw at base level
+        matches = []
+        ncc_map = normxcorr2D(image, template)
+        # show_image(ncc_map)
+        matching_y, matching_x = np.where(ncc_map >= threshold)
+
+        for (x, y) in zip(matching_x, matching_y):
+            x0 = int((x - (template_w / 2)))
+            y0 = int((y - (template_h / 2)))
+            x1 = int((x + (template_w / 2)))
+            y1 = int((y + (template_h / 2)))
+
+            matches.append([x0, y0, x1, y1])
+
+        return matches
