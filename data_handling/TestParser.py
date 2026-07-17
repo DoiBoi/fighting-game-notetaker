@@ -43,21 +43,33 @@ class TestParser(ut.TestCase):
     def test_parse_super_level(self):
         parser = Parser()
 
-        super_level = parser.parse_super_level(np.array(self.TEST_IMAGE_2))
+        super_level = parser.parse_super_level(np.array(self.TEST_IMAGE_2.convert("L")))
         self.assertEqual(super_level, 0)
 
-        super_level = parser.parse_super_level(np.array(self.TEST_IMAGE_3))
+        super_level = parser.parse_super_level(np.array(self.TEST_IMAGE_3.convert("L")))
         self.assertNotEqual(super_level, 1)
 
-    def test_find_template(self):
+    def test_find_all_templates(self):
         threshold = 0.99
         parser = Parser()
 
-        matches = parser._find_all_template(self.TEST_IMAGE_2.convert("L"), self.TEST_TEMPLATE.convert("L"), threshold)
+        matches = parser._find_all_templates(self.TEST_IMAGE_2.convert("L"), self.TEST_TEMPLATE.convert("L"), threshold)
         display_bounding_boxes(self.TEST_IMAGE_2, matches)
 
-        matches = parser._find_all_template(self.TEST_IMAGE_3.convert("L"), self.TEST_TEMPLATE.convert("L"), threshold)
+        matches = parser._find_all_templates(self.TEST_IMAGE_3.convert("L"), self.TEST_TEMPLATE.convert("L"), threshold)
         display_bounding_boxes(self.TEST_IMAGE_3, matches)
+
+        self.assertTrue(True)
+
+    def test_find_first_template(self):
+        threshold = 0.99
+        parser = Parser()
+
+        match = parser._find_first_template(self.TEST_IMAGE_2.convert("L"), self.TEST_TEMPLATE.convert("L"), threshold)
+        display_bounding_boxes(self.TEST_IMAGE_2, [match])
+
+        match = parser._find_first_template(self.TEST_IMAGE_3.convert("L"), self.TEST_TEMPLATE.convert("L"), threshold)
+        display_bounding_boxes(self.TEST_IMAGE_3, [match])
 
         self.assertTrue(True)
 

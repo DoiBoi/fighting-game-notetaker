@@ -77,25 +77,11 @@ class Parser:
         """
         threshold = 0.99
 
-        # Check for 0
-        matches0 = self._find_first_template(Image.fromarray(image).convert("L"), self.superTemplates[0], threshold)
-        if (matches0.size > 0):
-            return 0
-
-        # Check for 1
-        matches1 = self._find_first_template(Image.fromarray(image), self.superTemplates[1], threshold)
-        if (matches1.size > 0):
-            return 1
-
-        # Check for 2
-        matches2 = self._find_first_template(Image.fromarray(image), self.superTemplates[2], threshold)
-        if (matches2.size > 0):
-            return 2
-
-        # Check for 3
-        matches3 = self._find_first_template(Image.fromarray(image), self.superTemplates[3], threshold)
-        if (matches3.size > 0):
-            return 3
+        # Check for each super level
+        for i in range(len(self.superTemplates)):
+            matches = self._find_first_template(Image.fromarray(image), self.superTemplates[i], threshold)
+            if (matches.size > 0):
+                return i
 
         # Didn't find a valid super level number (might be blocked)
         return -1
@@ -136,7 +122,7 @@ class Parser:
 
         return []
 
-    def _find_all_template(self, image: Image.Image, template: Image.Image, threshold: float) -> list[np.ndarray]:
+    def _find_all_templates(self, image: Image.Image, template: Image.Image, threshold: float) -> list[np.ndarray]:
         """Finds bounding boxes in the given PIL image where the given template PIL image is. False positives are filtered out by the threshold value.
 
         Requires the image and template to be in B&W (a 2D array)
@@ -176,6 +162,7 @@ class Parser:
         min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(match_list)
         #* If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
         if (max_val >= threshold):
-            return np.array(max_loc)
+            template_h, template_w = np.array(template).shape[:2]
+            return np.array(np.array([max_loc[0], max_loc[1], max_loc[0] + template_w, max_loc[1] + template_h]))
 
         return np.array([])
