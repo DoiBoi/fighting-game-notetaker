@@ -27,7 +27,8 @@ def display_bounding_boxes(image: Image.Image, bounding_boxes: list[np.ndarray],
         bounding_boxes (np.ndarray): The list of 4-tuples that define a bounding box in the format [x0, y0, x1, y1].
         thickness (int, optional): The thickness of the lines when drawing the bounding boxes. Defaults to 5.
     """
-    image_draw = ImageDraw.Draw(image.copy())
+    image_copy = image.copy()
+    image_draw = ImageDraw.Draw(image_copy)
 
     # Draw bounding boxes
     for box in bounding_boxes:
@@ -38,10 +39,13 @@ def display_bounding_boxes(image: Image.Image, bounding_boxes: list[np.ndarray],
         image_draw.line([(x1, y1), (x0, y1)], fill="red", width=thickness)
         image_draw.line([(x0, y1), (x0, y0)], fill="red", width=thickness)
 
-    image.show()
+    image_copy.show()
 
-def normxcorr2D(image: Image.Image, template: Image.Image):
-    """Normalized cross-correlation for 2D PIL images. Wherever the search space has zero variance under the template, normalized cross-correlation is undefined.
+def _normxcorr2D(image: Image.Image, template: Image.Image):
+    """Normalized cross-correlation for 2D PIL images.
+    Wherever the search space has zero variance under the template, normalized cross-correlation is undefined.
+    An extremely slow, but mathematically-correct method.
+    It's advised to use OpenCV's `cv2.matchTemplate` function instead.
 
     Adapted from UBC's CPSC 425 course.
 

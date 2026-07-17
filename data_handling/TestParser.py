@@ -8,7 +8,9 @@ from HelperFunctions import *
 class TestParser(ut.TestCase):
     TEST_IMAGE_1 = Image.open("data_handling/test_images/BoundedTestImage.png")
     TEST_IMAGE_2 = Image.open("data_handling/test_images/BlankTestImage.jpg")
+    TEST_IMAGE_3 = Image.open("data_handling/test_images/BlankTestImage2.jpg")
     TEST_TEMPLATE = Image.open("data_handling/test_images/TestTemplate.jpg")
+    TEST_TEMPLATE2 = Image.open("data_handling/test_images/TestTemplate2.jpg")
 
     def test_parse_data(self):
         self.assertTrue(True)
@@ -35,13 +37,27 @@ class TestParser(ut.TestCase):
 
         # Checks if the top left pixel and the bottom right pixel are the same in the ROI of the original and the cropped ROI
         for roi_name in returned_rois.keys():
-            show_image(returned_rois[roi_name], roi_name)     # Displays the cropped ROIs
+            # show_image(returned_rois[roi_name], roi_name)     # Displays the cropped ROIs
             self.assertListEqual(list(returned_rois[roi_name][0, 0]), list(np.array(self.TEST_IMAGE_1)[test_rois[roi_name][2], test_rois[roi_name][0]]))
 
-    def test_find_template(self):
+    def test_parse_super_level(self):
         parser = Parser()
-        matches = parser.find_template(self.TEST_IMAGE_2.convert("L"), self.TEST_TEMPLATE.convert("L"), 0)
+
+        super_level = parser.parse_super_level(np.array(self.TEST_IMAGE_2))
+        self.assertEqual(super_level, 0)
+
+        super_level = parser.parse_super_level(np.array(self.TEST_IMAGE_3))
+        self.assertNotEqual(super_level, 1)
+
+    def test_find_template(self):
+        threshold = 0.99
+        parser = Parser()
+
+        matches = parser._find_all_template(self.TEST_IMAGE_2.convert("L"), self.TEST_TEMPLATE.convert("L"), threshold)
         display_bounding_boxes(self.TEST_IMAGE_2, matches)
+
+        matches = parser._find_all_template(self.TEST_IMAGE_3.convert("L"), self.TEST_TEMPLATE.convert("L"), threshold)
+        display_bounding_boxes(self.TEST_IMAGE_3, matches)
 
         self.assertTrue(True)
 

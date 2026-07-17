@@ -1,8 +1,18 @@
+import cv2
 import numpy as np
 from PIL import Image
 from HelperFunctions import *
 
 class Parser:
+    superTemplates = {
+        0: Image.open("templates/super0.jpg").convert("L"),
+        1: Image.open("templates/super1.jpg").convert("L"),
+        2: Image.open("templates/super2.jpg").convert("L"),
+        3: Image.open("templates/super3.jpg").convert("L")
+    }
+
+    template_match_method = cv2.TM_CCOEFF_NORMED
+
     def parse_data(self, data: np.ndarray):
         """Takes in data and parses it into a new datatype for easy analysis
         Args:
@@ -41,11 +51,11 @@ class Parser:
 
         return regions
 
-    def parse_bar_percentage(self, roi: np.ndarray) -> float:
+    def parse_bar_percentage(self, image: np.ndarray) -> float:
         """Given a frame of image, parse the meter gauge percentage (should also be healthbar)
 
         Args:
-            roi (np.ndarray): the region of interest
+            image (np.ndarray): the image to parse
 
         Returns:
             percentage (float): the normalized percentage of the bar
@@ -53,23 +63,48 @@ class Parser:
 
         return -1.0
 
-    def parse_super_level(self, roi: np.ndarray) -> int:
+    def parse_super_level(self, image: np.ndarray) -> int:
         """Given an image, retrieve the super level from the text
 
         Args:
-            roi (np.ndarray): the region (image) which the number resides in
+            image (np.ndarray): The image which the number is in.
 
         Returns:
-            percentage (int): the number in the image
+            level (int): The super level number in the given image.
+              Returns between [0, 3] if found or -1 if no number was found.
+              This can either mean the image provided didn't contain the super level or the number was blocked by something
+              (store and use previous frame values for continuous data).
         """
+        threshold = 0.99
 
+        # Check for 0
+        matches0 = self._find_first_template(Image.fromarray(image).convert("L"), self.superTemplates[0], threshold)
+        if (matches0.size > 0):
+            return 0
+
+        # Check for 1
+        matches1 = self._find_first_template(Image.fromarray(image), self.superTemplates[1], threshold)
+        if (matches1.size > 0):
+            return 1
+
+        # Check for 2
+        matches2 = self._find_first_template(Image.fromarray(image), self.superTemplates[2], threshold)
+        if (matches2.size > 0):
+            return 2
+
+        # Check for 3
+        matches3 = self._find_first_template(Image.fromarray(image), self.superTemplates[3], threshold)
+        if (matches3.size > 0):
+            return 3
+
+        # Didn't find a valid super level number (might be blocked)
         return -1
 
-    def parse_time(self, roi: np.ndarray) -> int:
+    def parse_time(self, image: np.ndarray) -> int:
         """Given an image, retrieve the time remaining from the text
 
         Args:
-            roi (np.ndarray): the region (image) which the number resides in
+            image (np.ndarray): the image which the number is in
 
         Returns:
             percentage (int): the number in the image
@@ -101,7 +136,7 @@ class Parser:
 
         return []
 
-    def find_template(self, image: Image.Image, template: Image.Image, threshold: float) -> list[np.ndarray]:
+    def _find_all_template(self, image: Image.Image, template: Image.Image, threshold: float) -> list[np.ndarray]:
         """Finds bounding boxes in the given PIL image where the given template PIL image is. False positives are filtered out by the threshold value.
 
         Requires the image and template to be in B&W (a 2D array)
@@ -116,18 +151,31 @@ class Parser:
         """
         template_h, template_w = np.array(template).shape[:2]
 
-        # Find matches at each level and draw at base level
+        # Taken from: https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_template_matching/py_template_matching.html
+        match_list = cv2.matchTemplate(
+            np.array(image),
+            np.array(template),
+            self.template_match_method
+        )
+        #* If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
+        locations = np.where(match_list >= threshold)
+
         matches = []
-        ncc_map = normxcorr2D(image, template)
-        # show_image(ncc_map)
-        matching_y, matching_x = np.where(ncc_map >= threshold)
-
-        for (x, y) in zip(matching_x, matching_y):
-            x0 = int((x - (template_w / 2)))
-            y0 = int((y - (template_h / 2)))
-            x1 = int((x + (template_w / 2)))
-            y1 = int((y + (template_h / 2)))
-
-            matches.append([x0, y0, x1, y1])
+        for pt in zip(*locations[::-1]):
+            matches.append(np.array([pt[0], pt[1], pt[0] + template_w, pt[1] + template_h]))
 
         return matches
+
+    def _find_first_template(self, image: Image.Image, template: Image.Image, threshold: float) -> np.ndarray:
+        match_list = cv2.matchTemplate(
+            np.array(image),
+            np.array(template),
+            self.template_match_method
+        )
+
+        min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(match_list)
+        #* If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
+        if (max_val >= threshold):
+            return np.array(max_loc)
+
+        return np.array([])
