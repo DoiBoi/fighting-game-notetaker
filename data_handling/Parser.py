@@ -87,15 +87,26 @@ class Parser:
         return -1
 
     def parse_time(self, image: np.ndarray) -> int:
-        """Given an image, retrieve the time remaining from the text
+        """Given an image, retrieve the time remaining from the text.
 
         Args:
-            image (np.ndarray): the image which the number is in
+            image (np.ndarray): The numpy array for the B&W image which the number is in. Give the whole raw image without cropping it.
 
         Returns:
-            percentage (int): the number in the image
+            time (int): The time left in the image. Can be between [99, 0] if a number was detected, or -1 if a number wasn't detected.
         """
+        # Crop the image to be bounded roughly around the time section
 
+        # Detect for a number [0-9] (go from 9 to 0 to make it faster initially)
+
+        # If a number was detected, crop the left of the image to be from that point_x+template_w
+
+        # Detect for a number [0-9] (go from 9 to 0 to make it faster initially)
+
+        # If a number was detected, return the 2 digit number
+        # Else return the 1 digit number from the first detection
+
+        # A number wasn't detected. This could be due to the number being obstructed by a character.
         return -1
 
     def parse_character_action(self, roi: np.ndarray) -> list:
