@@ -5,6 +5,7 @@ matplotlib
 
 # Vision stuff
 opencv-python
+opencv-python-headless
 
 # Stream stuff
 streamlink

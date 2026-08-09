@@ -1,15 +1,19 @@
 import cv2
 import numpy as np
-from PIL import Image
 from HelperFunctions import *
+from PIL import Image
+
+SUPERTEMPLATES = {
+    0: Image.open("templates/super0.jpg").convert("L"),
+    1: Image.open("templates/super1.jpg").convert("L"),
+    2: Image.open("templates/super2.jpg").convert("L"),
+    3: Image.open("templates/super3.jpg").convert("L"),
+}
+
 
 class Parser:
-    superTemplates = {
-        0: Image.open("templates/super0.jpg").convert("L"),
-        1: Image.open("templates/super1.jpg").convert("L"),
-        2: Image.open("templates/super2.jpg").convert("L"),
-        3: Image.open("templates/super3.jpg").convert("L")
-    }
+    def __init__(self) -> None:
+        self.superTemplates = SUPERTEMPLATES
 
     template_match_method = cv2.TM_CCOEFF_NORMED
 
@@ -25,7 +29,9 @@ class Parser:
 
         pass
 
-    def crop_regions(self, data: np.ndarray, rois: dict[str, np.ndarray]) -> dict[str, np.ndarray]:
+    def crop_regions(
+        self, data: np.ndarray, rois: dict[str, np.ndarray]
+    ) -> dict[str, np.ndarray]:
         """Given data, crops the data
 
         Args:
@@ -45,9 +51,13 @@ class Parser:
         for roi_name in rois.keys():
             roi_coords = rois[roi_name]
 
-            if len(roi_coords) == 4:    # Check if there's two pairs of coordinates
-                if roi_coords[0] < roi_coords[1] and roi_coords[2] < roi_coords[3]: # Check if it's a positively sized bounding box
-                    regions[roi_name] = data[roi_coords[2]:roi_coords[3], roi_coords[0]:roi_coords[1]]
+            if len(roi_coords) == 4:  # Check if there's two pairs of coordinates
+                if (
+                    roi_coords[0] < roi_coords[1] and roi_coords[2] < roi_coords[3]
+                ):  # Check if it's a positively sized bounding box
+                    regions[roi_name] = data[
+                        roi_coords[2] : roi_coords[3], roi_coords[0] : roi_coords[1]
+                    ]
 
         return regions
 
@@ -79,8 +89,10 @@ class Parser:
 
         # Check for each super level
         for i in range(len(self.superTemplates)):
-            matches = self._find_first_template(Image.fromarray(image), self.superTemplates[i], threshold)
-            if (matches.size > 0):
+            matches = self._find_first_template(
+                Image.fromarray(image), self.superTemplates[i], threshold
+            )
+            if matches.size > 0:
                 return i
 
         # Didn't find a valid super level number (might be blocked)
@@ -133,7 +145,9 @@ class Parser:
 
         return []
 
-    def _find_all_templates(self, image: Image.Image, template: Image.Image, threshold: float) -> list[np.ndarray]:
+    def _find_all_templates(
+        self, image: Image.Image, template: Image.Image, threshold: float
+    ) -> list[np.ndarray]:
         """Finds bounding boxes in the given PIL image where the given template PIL image is. False positives are filtered out by the threshold value.
 
         Requires the image and template to be in B&W (a 2D array)
@@ -150,30 +164,39 @@ class Parser:
 
         # Taken from: https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_template_matching/py_template_matching.html
         match_list = cv2.matchTemplate(
-            np.array(image),
-            np.array(template),
-            self.template_match_method
+            np.array(image), np.array(template), self.template_match_method
         )
-        #* If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
+        # * If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
         locations = np.where(match_list >= threshold)
 
         matches = []
         for pt in zip(*locations[::-1]):
-            matches.append(np.array([pt[0], pt[1], pt[0] + template_w, pt[1] + template_h]))
+            matches.append(
+                np.array([pt[0], pt[1], pt[0] + template_w, pt[1] + template_h])
+            )
 
         return matches
 
-    def _find_first_template(self, image: Image.Image, template: Image.Image, threshold: float) -> np.ndarray:
+    def _find_first_template(
+        self, image: Image.Image, template: Image.Image, threshold: float
+    ) -> np.ndarray:
         match_list = cv2.matchTemplate(
-            np.array(image),
-            np.array(template),
-            self.template_match_method
+            np.array(image), np.array(template), self.template_match_method
         )
 
         min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(match_list)
-        #* If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
-        if (max_val >= threshold):
+        # * If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
+        if max_val >= threshold:
             template_h, template_w = np.array(template).shape[:2]
-            return np.array(np.array([max_loc[0], max_loc[1], max_loc[0] + template_w, max_loc[1] + template_h]))
+            return np.array(
+                np.array(
+                    [
+                        max_loc[0],
+                        max_loc[1],
+                        max_loc[0] + template_w,
+                        max_loc[1] + template_h,
+                    ]
+                )
+            )
 
         return np.array([])
