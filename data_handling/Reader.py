@@ -1,6 +1,7 @@
+import cv2
 import numpy as np
 from streamlink.session.session import Streamlink
-import cv2
+
 
 class Reader:
     def read(self):
@@ -36,4 +37,3 @@ class DesktopReader(Reader):
 
 class VideoReader(Reader):
     pass
-

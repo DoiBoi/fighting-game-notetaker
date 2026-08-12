@@ -1,8 +1,10 @@
 import math
-import numpy as np
+
 import matplotlib.pyplot as plt
+import numpy as np
 from PIL import Image, ImageDraw
 from scipy import signal
+
 
 def show_image(image: np.ndarray, title: str = ""):
     """Displays the given image using your device's default image viewer.

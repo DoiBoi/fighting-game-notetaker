@@ -1,9 +1,10 @@
 import unittest as ut
+
 import numpy as np
+from HelperFunctions import *
+from Parser import Parser
 from PIL import Image
 
-from Parser import Parser
-from HelperFunctions import *
 
 class TestParser(ut.TestCase):
     TEST_IMAGE_1 = Image.open("data_handling/test_images/BoundedTestImage.png")

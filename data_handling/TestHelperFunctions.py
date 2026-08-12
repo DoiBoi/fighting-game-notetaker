@@ -1,8 +1,9 @@
 import unittest as ut
+
 import numpy as np
+from HelperFunctions import *
 from PIL import Image
 
-from HelperFunctions import *
 
 class TestHelperFunctions(ut.TestCase):
     TEST_IMAGE = Image.open("data_handling/test_images/BlankTestImage.jpg")

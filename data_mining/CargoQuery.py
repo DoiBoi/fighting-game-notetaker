@@ -49,14 +49,12 @@ class CargoQueryAgent:
         return self.sendRequest(params).get("cargoquery", {})
 
     def stripMarkup(self, value: str) -> str:
-        """Strip HTML / wiki markup from the source."""
         value = re.sub(r"<[^>]*>", "", value)
         value = re.sub(r"'''?", "", value)
         value = value.replace("&nbsp;", " ")
         return value.strip()
 
     def textOrNull(self, raw) -> str | None:
-        """Normalize an arbitrary text column to a clean string or None."""
         text = self.stripMarkup(str(raw) if raw is not None else "")
         if not text or text == "-" or "{{{" in text:
             return None

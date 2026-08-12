@@ -9,3 +9,6 @@ opencv-python-headless
 
 # Stream stuff
 streamlink
+
+# Backend stuff
+sqlite3
