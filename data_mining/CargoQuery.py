@@ -91,13 +91,20 @@ class CargoQueryAgent:
 
         return results
 
-    def downloadImages(self, images: dict[str, str], outDir: Path) -> None:
+    def downloadImages(
+        self,
+        images: dict[str, str],
+        outDir: Path,
+        maxRetries: int = 3,
+        backoffBase: float = 1.0,
+    ) -> None:
         outDir.mkdir(parents=True, exist_ok=True)
 
         downloaded, skipped, failed = 0, 0, 0
         for filename, url in images.items():
             dest = (outDir / filename).resolve()
 
+            # Guard against a filename escaping outDir via ../ or an absolute path
             if outDir.resolve() not in dest.parents:
                 print(f"Skipping unsafe path: {filename}")
                 failed += 1
@@ -106,22 +113,33 @@ class CargoQueryAgent:
             if dest.exists():
                 skipped += 1
                 continue
-
             if not url:
                 skipped += 1
                 continue
 
             dest.parent.mkdir(parents=True, exist_ok=True)
 
-            try:
-                req = Request(url, headers={"User-Agent": USER_AGENT})
-                with urlopen(req, timeout=60) as resp:
-                    dest.write_bytes(resp.read())
+            success = False
+            for attempt in range(maxRetries + 1):
+                try:
+                    req = Request(url, headers={"User-Agent": USER_AGENT})
+                    with urlopen(req, timeout=60) as resp:
+                        dest.write_bytes(resp.read())
+                    success = True
+                    break
+                except (HTTPError, URLError) as e:
+                    if attempt < maxRetries:
+                        wait = backoffBase * (2 ** attempt)
+                        print(f"Retrying {filename} in {wait:.1f}s (attempt {attempt + 1}/{maxRetries}) after: {e}")
+                        time.sleep(wait)
+                    else:
+                        print(f"Failed to download {filename} after {maxRetries + 1} attempts: {e}")
+
+            if success:
                 downloaded += 1
-            except (HTTPError, URLError) as e:
-                print(f"Failed to download {filename}: {e}")
+            else:
                 failed += 1
 
-            time.sleep(0.2)
+            time.sleep(0.2)  # be polite between files regardless of outcome
 
-        print(f"Downloaded {downloaded}, skipped {skipped} (already existed), failed {failed}")
+        print(f"Downloaded {downloaded}, skipped {skipped} (already existed or does not exist), failed {failed}")

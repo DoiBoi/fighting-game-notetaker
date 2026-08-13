@@ -106,4 +106,6 @@ class StreetFighter6:
 
 if __name__ == "__main__":
     streetFighter6 = StreetFighter6()
+    streetFighter6.populateDatabase()
     streetFighter6.downloadImages()
+    streetFighter6.close()
