@@ -5,3 +5,6 @@ frames/
 reference/
 *.db-shm
 *.db-wal
+
+# run download images yourself
+data/images
