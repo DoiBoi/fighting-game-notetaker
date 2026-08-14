@@ -2,6 +2,7 @@ import os
 
 from PIL import Image
 
+# I got this from google AI
 
 def batch_crop_images(input_folder, output_folder, crop_box):
     """
