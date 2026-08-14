@@ -4,10 +4,10 @@ from HelperFunctions import *
 from PIL import Image
 
 SUPERTEMPLATES = {
-    0: Image.open("templates/super0.jpg").convert("L"),
-    1: Image.open("templates/super1.jpg").convert("L"),
-    2: Image.open("templates/super2.jpg").convert("L"),
-    3: Image.open("templates/super3.jpg").convert("L"),
+    0: Image.open("templates/super/super0.jpg").convert("L"),
+    1: Image.open("templates/super/super1.jpg").convert("L"),
+    2: Image.open("templates/super/super2.jpg").convert("L"),
+    3: Image.open("templates/super/super3.jpg").convert("L"),
 }
 
 
@@ -51,13 +51,12 @@ class Parser:
         for roi_name in rois.keys():
             roi_coords = rois[roi_name]
 
-            if len(roi_coords) == 4:  # Check if there's two pairs of coordinates
-                if (
-                    roi_coords[0] < roi_coords[1] and roi_coords[2] < roi_coords[3]
-                ):  # Check if it's a positively sized bounding box
-                    regions[roi_name] = data[
-                        roi_coords[2] : roi_coords[3], roi_coords[0] : roi_coords[1]
-                    ]
+            if len(roi_coords) == 4 and (
+                roi_coords[0] < roi_coords[1] and roi_coords[2] < roi_coords[3]
+            ):  # Check if there's two pairs of coordinates and check if it's a positively sized bounding box
+                regions[roi_name] = data[
+                    roi_coords[2] : roi_coords[3], roi_coords[0] : roi_coords[1]
+                ]
 
         return regions
 
@@ -97,6 +96,26 @@ class Parser:
 
         # Didn't find a valid super level number (might be blocked)
         return -1
+
+    def parse_character(self, image: np.ndarray) -> dict:
+        """Given an image, retrieve the character
+
+        Args:
+            image (np.ndarray): The image which the character description is in
+
+        Returns:
+            character (dict): The label of the character. It is a dict to dictate
+                              whether it is on player 1 or 2
+        """
+        # threshold = 0.99
+        # for i in range(len(self.superTemplates)):
+        #     matches = self._find_first_template(
+        #         Image.fromarray(image), self.superTemplates[i], threshold
+        #     )
+        #     if matches.size > 0:
+        #         return i
+
+        return {}
 
     def parse_time(self, image: np.ndarray) -> int:
         """Given an image, retrieve the time remaining from the text.
