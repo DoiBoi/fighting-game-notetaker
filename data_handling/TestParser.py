@@ -49,6 +49,15 @@ class TestParser(ut.TestCase):
         super_level = parser.parse_super_level(np.array(self.TEST_IMAGE_3.convert("L")))
         self.assertNotEqual(super_level, 1)
 
+    def test_parse_time(self):
+        parser = Parser()
+
+        time_left = parser.parse_time(np.array(self.TEST_IMAGE_2.convert("L")))
+        self.assertEqual(time_left, 92)
+
+        time_left = parser.parse_time(np.array(self.TEST_IMAGE_3.convert("L")))
+        self.assertEqual(time_left, 90)
+
     def test_find_all_templates(self):
         threshold = 0.99
         parser = Parser()

@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 from PIL import Image
-from HelperFunctions import *
 
 class Parser:
     superTemplates = {
@@ -9,6 +8,19 @@ class Parser:
         1: Image.open("templates/super1.jpg").convert("L"),
         2: Image.open("templates/super2.jpg").convert("L"),
         3: Image.open("templates/super3.jpg").convert("L")
+    }
+
+    timeTemplates = {
+        0: Image.open("templates/time0.jpg").convert("L"),
+        1: Image.open("templates/time1.jpg").convert("L"),
+        2: Image.open("templates/time2.jpg").convert("L"),
+        3: Image.open("templates/time3.jpg").convert("L"),
+        4: Image.open("templates/time4.jpg").convert("L"),
+        5: Image.open("templates/time5.jpg").convert("L"),
+        6: Image.open("templates/time6.jpg").convert("L"),
+        7: Image.open("templates/time7.jpg").convert("L"),
+        8: Image.open("templates/time8.jpg").convert("L"),
+        9: Image.open("templates/time9.jpg").convert("L"),
     }
 
     template_match_method = cv2.TM_CCOEFF_NORMED
@@ -95,6 +107,8 @@ class Parser:
         Returns:
             time (int): The time left in the image. Can be between [99, 0] if a number was detected, or -1 if a number wasn't detected.
         """
+        threshold = 0.99
+
         # Crop the image to be bounded roughly around the time section
 
         # Detect for a number [0-9] (go from 9 to 0 to make it faster initially)
@@ -164,6 +178,18 @@ class Parser:
         return matches
 
     def _find_first_template(self, image: Image.Image, template: Image.Image, threshold: float) -> np.ndarray:
+        """Finds the first bounding box in the given PIL image where the given template PIL image is. False positives are filtered out by the threshold value.
+
+                Requires the image and template to be in B&W (a 2D array)
+
+                Args:
+                    image (Image.Image): The PIL image to find the template in.
+                    template (Image.Image): The template (a PIL image) to check for.
+                    threshold (float): The detection threshold.
+
+                Returns:
+                    list[np.ndarray]: A list of bounding boxes where the template was found and had a similarity higher than the threshold.
+                """
         match_list = cv2.matchTemplate(
             np.array(image),
             np.array(template),
