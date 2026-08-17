@@ -22,7 +22,7 @@ def batch_crop_images(input_folder, output_folder, crop_box):
     for filename in os.listdir(input_folder):
         if filename.lower().endswith(valid_extensions):
             input_path = os.path.join(input_folder, filename)
-            output_path = os.path.join(output_folder, f"cropped_{filename}")
+            output_path = os.path.join(output_folder, f"{filename}")
 
             try:
                 with Image.open(input_path) as img:
@@ -39,10 +39,10 @@ def batch_crop_images(input_folder, output_folder, crop_box):
 # --- Configuration ---
 # Define your box dimensions: (left, upper, right, lower)
 # Example: Crops a 400x400 box starting at X=100, Y=100
-BOX_TO_CROP = (0, 23, 197, 97)
+BOX_TO_CROP = (1722, 23, 1920, 97)
 
 INPUT_DIR = "./sf6_characters"
-OUTPUT_DIR = "./templates/characters"
+OUTPUT_DIR = "./templates/characters/player2"
 
 # Run the function
 batch_crop_images(INPUT_DIR, OUTPUT_DIR, BOX_TO_CROP)

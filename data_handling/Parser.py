@@ -1,3 +1,7 @@
+import os
+from json import load
+from pathlib import Path
+
 import cv2
 import numpy as np
 from HelperFunctions import *
@@ -11,9 +15,23 @@ SUPERTEMPLATES = {
 }
 
 
+def load_images(dir: str) -> dict:
+    ret = {}
+    for filename in os.listdir(dir):
+        input_path = os.path.join(dir, filename)
+        try:
+            with Image.open(input_path).convert("L") as img:
+                ret[os.path.splitext(filename)[0]] = img
+        except Exception as e:
+            print(f"Error processing {filename}: {e}")
+    return ret
+
+
 class Parser:
     def __init__(self) -> None:
         self.superTemplates = SUPERTEMPLATES
+        self.charaTemplates1 = load_images("templates/characters/player1")
+        self.charaTemplates2 = load_images("templates/characters/player2")
 
     template_match_method = cv2.TM_CCOEFF_NORMED
 
@@ -51,8 +69,9 @@ class Parser:
         for roi_name in rois.keys():
             roi_coords = rois[roi_name]
 
-            if len(roi_coords) == 4 and (
-                roi_coords[0] < roi_coords[1] and roi_coords[2] < roi_coords[3]
+            if (
+                len(roi_coords) == 4
+                and (roi_coords[0] < roi_coords[1] and roi_coords[2] < roi_coords[3])
             ):  # Check if there's two pairs of coordinates and check if it's a positively sized bounding box
                 regions[roi_name] = data[
                     roi_coords[2] : roi_coords[3], roi_coords[0] : roi_coords[1]
@@ -97,25 +116,31 @@ class Parser:
         # Didn't find a valid super level number (might be blocked)
         return -1
 
-    def parse_character(self, image: np.ndarray) -> dict:
+    def parse_characters(self, image: np.ndarray) -> list:
         """Given an image, retrieve the character
 
         Args:
             image (np.ndarray): The image which the character description is in
 
         Returns:
-            character (dict): The label of the character. It is a dict to dictate
-                              whether it is on player 1 or 2
+            character (list): The labels of the characters, index 0 being player 1, index 1 being player 2
         """
-        # threshold = 0.99
-        # for i in range(len(self.superTemplates)):
-        #     matches = self._find_first_template(
-        #         Image.fromarray(image), self.superTemplates[i], threshold
-        #     )
-        #     if matches.size > 0:
-        #         return i
-
-        return {}
+        threshold = 0.75
+        ret = ["", ""]
+        for name, char_image in self.charaTemplates1.items():
+            matches1 = self._find_first_template(
+                Image.fromarray(image), char_image, threshold
+            )
+            matches2 = self._find_first_template(
+                Image.fromarray(image),
+                self.charaTemplates2[name],
+                threshold,
+            )
+            if matches1.size > 0:
+                ret[0] = name
+            if matches2.size > 0:
+                ret[1] = name
+        return ret
 
     def parse_time(self, image: np.ndarray) -> int:
         """Given an image, retrieve the time remaining from the text.
