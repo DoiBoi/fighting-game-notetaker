@@ -55,7 +55,6 @@ class TestParser(ut.TestCase):
         self.assertEqual(characters[0], "JP")
         self.assertEqual(characters[1], "Ed")
 
-
         characters = parser.parse_characters(np.array(self.TEST_IMAGE_4.convert("L")))
         self.assertEqual(characters[0], "JP")
         self.assertEqual(characters[1], "Ed")
