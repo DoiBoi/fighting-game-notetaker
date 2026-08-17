@@ -3,14 +3,14 @@ import numpy as np
 from PIL import Image
 
 class Parser:
-    superTemplates = {
+    _SUPER_TEMPLATES = {
         0: Image.open("templates/super0.jpg").convert("L"),
         1: Image.open("templates/super1.jpg").convert("L"),
         2: Image.open("templates/super2.jpg").convert("L"),
         3: Image.open("templates/super3.jpg").convert("L")
     }
 
-    timeTemplates = {
+    _TIME_TEMPLATES = {
         0: Image.open("templates/time0.jpg").convert("L"),
         1: Image.open("templates/time1.jpg").convert("L"),
         2: Image.open("templates/time2.jpg").convert("L"),
@@ -23,7 +23,9 @@ class Parser:
         9: Image.open("templates/time9.jpg").convert("L"),
     }
 
-    template_match_method = cv2.TM_CCOEFF_NORMED
+    _TIME_BOUNDING_BOX = np.array([912, 1010, 45, 130])
+
+    _TEMPLATE_MATCH_METHOD = cv2.TM_CCOEFF_NORMED
 
     def parse_data(self, data: np.ndarray):
         """Takes in data and parses it into a new datatype for easy analysis
@@ -50,7 +52,8 @@ class Parser:
 
         Returns:
             rois (dict): the dict will have named regions (np.ndarray) with its
-                corresponding slice of the given data
+                corresponding slice of the given data.
+                The data is formatted as [x1, x2, y1, y2].
         """
         regions = {}
 
@@ -87,12 +90,12 @@ class Parser:
               This can either mean the image provided didn't contain the super level or the number was blocked by something
               (store and use previous frame values for continuous data).
         """
-        threshold = 0.99
+        THRESHOLD = 0.99
 
         # Check for each super level
-        for i in range(len(self.superTemplates)):
-            matches = self._find_first_template(Image.fromarray(image), self.superTemplates[i], threshold)
-            if (matches.size > 0):
+        for i in range(len(self._SUPER_TEMPLATES)):
+            matches = self._find_first_template(Image.fromarray(image), self._SUPER_TEMPLATES[i], THRESHOLD)
+            if matches.size > 0:
                 return i
 
         # Didn't find a valid super level number (might be blocked)
@@ -105,20 +108,57 @@ class Parser:
             image (np.ndarray): The numpy array for the B&W image which the number is in. Give the whole raw image without cropping it.
 
         Returns:
-            time (int): The time left in the image. Can be between [99, 0] if a number was detected, or -1 if a number wasn't detected.
+            time (int): The time left in the image. Can be between [0, 99] if a number was detected, or -1 if a number wasn't detected.
         """
-        threshold = 0.99
+        THRESHOLD = 0.99
 
-        # Crop the image to be bounded roughly around the time section
+        cropped_image = self.crop_regions(
+            image,
+            {
+                "first_digit": np.array([
+                    self._TIME_BOUNDING_BOX[0],
+                    int((self._TIME_BOUNDING_BOX[0] + self._TIME_BOUNDING_BOX[1]) / 2),
+                    self._TIME_BOUNDING_BOX[2],
+                    self._TIME_BOUNDING_BOX[3]
+                ])
+            }
+        )["first_digit"]
 
-        # Detect for a number [0-9] (go from 9 to 0 to make it faster initially)
+        # Detect for a number [0-9]
+        first_num = -1
+        for i in range(len(self._TIME_TEMPLATES)):
+            matches = self._find_first_template(Image.fromarray(cropped_image), self._TIME_TEMPLATES[i], THRESHOLD)
 
-        # If a number was detected, crop the left of the image to be from that point_x+template_w
+            if matches.size > 0:
+                first_num = i
 
-        # Detect for a number [0-9] (go from 9 to 0 to make it faster initially)
+                break
 
-        # If a number was detected, return the 2 digit number
+        # If a number was detected, crop the left of the image to be from that point_x
+        if first_num != -1:
+            cropped_image = self.crop_regions(
+                image,
+                {
+                    "second_digit": np.array([
+                        int((self._TIME_BOUNDING_BOX[0] + self._TIME_BOUNDING_BOX[1]) / 2),
+                        self._TIME_BOUNDING_BOX[1],
+                        self._TIME_BOUNDING_BOX[2],
+                        self._TIME_BOUNDING_BOX[3]
+                    ])
+                }
+            )["second_digit"]
+
+        # Detect for a number [0-9]
+        for i in range(len(self._TIME_TEMPLATES)):
+            matches = self._find_first_template(Image.fromarray(cropped_image), self._TIME_TEMPLATES[i], THRESHOLD)
+
+            if matches.size > 0:
+                # If a number was detected, return the 2 digit number
+                return (first_num * 10) + i
+
         # Else return the 1 digit number from the first detection
+        if first_num != -1:
+            return first_num
 
         # A number wasn't detected. This could be due to the number being obstructed by a character.
         return -1
@@ -166,7 +206,7 @@ class Parser:
         match_list = cv2.matchTemplate(
             np.array(image),
             np.array(template),
-            self.template_match_method
+            self._TEMPLATE_MATCH_METHOD
         )
         #* If the method is TM_SQDIFF or TM_SQDIFF_NORMED, take minimum
         locations = np.where(match_list >= threshold)
@@ -193,7 +233,7 @@ class Parser:
         match_list = cv2.matchTemplate(
             np.array(image),
             np.array(template),
-            self.template_match_method
+            self._TEMPLATE_MATCH_METHOD
         )
 
         min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(match_list)

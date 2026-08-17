@@ -8,9 +8,9 @@ vidcap = cv2.VideoCapture('demo.mp4')
 success, image = vidcap.read()
 interval = 180
 count = 0
-start = 6900
+start = 12800
 success = True
-while success and count <= 12800:
+while success and count <= (12800*2):
     if count >= start:
         cv2.imwrite("frames/frame%d.jpg" % count, image)     # save frame as JPEG file
         success, image = vidcap.read()
