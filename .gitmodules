@@ -1,0 +1,3 @@
+[submodule "fg-input-recorder"]
+	path = fg-input-recorder
+	url = https://github.com/DoiBoi/fg-input-recorder
