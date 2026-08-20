@@ -9,8 +9,3 @@ opencv-python-headless
 
 # Stream stuff
 streamlink
-
-# Input stuff
-pygame
-keyboard
-pysdl2-dll
