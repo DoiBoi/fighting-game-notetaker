@@ -61,8 +61,8 @@ class Backend:
         )
         self.conn.commit()
 
-    def fetchData(self, columns="*") -> list[dict]:
-        self.cursor.execute(f"SELECT {columns} FROM {self.name}")
+    def fetchData(self, columns="*", where = "") -> list[dict]:
+        self.cursor.execute(f"SELECT {columns} FROM {self.name} WHERE {where}")
         return self.cursor.fetchall()
 
     def removeTable(self) -> None:
