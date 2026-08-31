@@ -31,6 +31,8 @@ class StreetFighter6:
             title_data = obj.pop("title")
             obj.update(title_data)
         obj = {key: self.cargoQuery.textOrNull(value) for key, value in obj.items()}
+        if obj.get("moveId",None):
+            obj["moveId"] = obj.get("moveId", "").lower()
         if obj.get("cancel", None):
             obj["cancel"] = self.getCancelArray(obj["cancel"])
         if obj.get("guard", None):
@@ -107,5 +109,4 @@ class StreetFighter6:
 if __name__ == "__main__":
     streetFighter6 = StreetFighter6()
     streetFighter6.populateDatabase()
-    streetFighter6.downloadImages()
     streetFighter6.close()

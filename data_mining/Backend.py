@@ -1,9 +1,9 @@
+from pathlib import Path
 import sqlite3
 from dataclasses import dataclass
 from functools import reduce
 
-BACKEND = "./data/data.db"
-
+BACKEND = Path("../data/data.db").resolve()
 
 @dataclass
 class Column:
@@ -47,7 +47,7 @@ class Backend:
     def getDBColumn(self) -> None:
         self.cursor.execute("SELECT name FROM pragma_table_info(?)", (self.name,))
 
-        self.columns = [row[0] for row in self.cursor.fetchall()]
+        self.columns = [row["name"] for row in self.cursor.fetchall()]
 
     def pushData(self, payload: list[dict]) -> None:
         if not self.columns:
@@ -61,7 +61,7 @@ class Backend:
         )
         self.conn.commit()
 
-    def fetchData(self, columns="*", where = "") -> list[dict]:
+    def fetchData(self, columns="*", where = "true") -> list[dict]:
         self.cursor.execute(f"SELECT {columns} FROM {self.name} WHERE {where}")
         return self.cursor.fetchall()
 

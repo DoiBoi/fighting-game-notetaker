@@ -1,0 +1,7 @@
+Initializing gamepad
+Executing Shin Hashogeki Lv.1: 214214P
+pressing button: 2
+pressing button: 1
+pressing button: 4
+pressing button: 2
+pressing button: 1

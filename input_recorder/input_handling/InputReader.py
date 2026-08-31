@@ -1,6 +1,6 @@
 import json
 import os
-import sys
+import re
 from functools import reduce
 
 from data_mining.Backend import Backend
@@ -37,10 +37,7 @@ _NUMPAD_BTN_MAPPING = {
     14: (False, False, False, True),
 }
 
-
 class InputReader:
-    # mapping = {}
-
     def __init__(self, name: str = "", mapping=None, character=None) -> None:
         self.frame = Backend(f"{name}_frame_data")
         if not mapping:
@@ -51,7 +48,11 @@ class InputReader:
             self.moves = []
         else:
             self.moves = self.frame.fetchData("input, name", f"chara = \"{character}\"")[0]
+
         print(self.moves)
+
+    def _tokenize(self, string, token):
+        return [() for m in token.finditer(string)]
 
     def _handleSOCD(
         self, direction: tuple[bool, bool, bool, bool]

@@ -8,3 +8,5 @@ reference/
 
 # run download images yourself
 data/images
+
+.env
