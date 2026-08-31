@@ -1,0 +1,686 @@
+{"t": 67606.1898574, "type": "key_down", "key": "S"}
+{"t": 67606.3098574, "type": "key_up", "key": "S"}
+{"t": 67606.8548574, "type": "key_down", "key": "D"}
+{"t": 67606.9898574, "type": "key_up", "key": "D"}
+{"t": 67607.0578574, "type": "key_down", "key": "A"}
+{"t": 67607.1418574, "type": "key_down", "key": "S"}
+{"t": 67607.1928574, "type": "key_up", "key": "A"}
+{"t": 67607.2438574, "type": "key_up", "key": "S"}
+{"t": 67607.3618574, "type": "key_down", "key": "D"}
+{"t": 67607.3798574, "type": "key_down", "key": "W"}
+{"t": 67607.5138574, "type": "key_up", "key": "W"}
+{"t": 67607.5308574, "type": "key_up", "key": "D"}
+{"t": 67607.6528574, "type": "key_down", "key": "A"}
+{"t": 67607.7038574, "type": "key_down", "key": "S"}
+{"t": 67607.7888574, "type": "key_up", "key": "A"}
+{"t": 67607.8058574, "type": "key_down", "key": "D"}
+{"t": 67607.8238574, "type": "key_up", "key": "S"}
+{"t": 67607.9228574, "type": "key_down", "key": "W"}
+{"t": 67607.9738574, "type": "key_up", "key": "D"}
+{"t": 67608.0428574, "type": "key_up", "key": "W"}
+{"t": 67608.1258574, "type": "key_down", "key": "A"}
+{"t": 67608.1768574, "type": "key_down", "key": "S"}
+{"t": 67608.2448574, "type": "key_up", "key": "A"}
+{"t": 67608.3128574, "type": "key_up", "key": "S"}
+{"t": 67608.5488574, "type": "key_down", "key": "W"}
+{"t": 67608.6318574, "type": "key_up", "key": "W"}
+{"t": 67608.9678574, "type": "key_down", "key": "D"}
+{"t": 67609.0868574, "type": "key_up", "key": "D"}
+{"t": 67609.2918574, "type": "key_down", "key": "A"}
+{"t": 67609.4098574, "type": "key_down", "key": "W"}
+{"t": 67609.4608574, "type": "key_up", "key": "A"}
+{"t": 67609.4948574, "type": "key_down", "key": "D"}
+{"t": 67609.5468574, "type": "key_up", "key": "W"}
+{"t": 67609.6128574, "type": "key_up", "key": "D"}
+{"t": 67609.6628574, "type": "key_down", "key": "S"}
+{"t": 67609.7808574, "type": "key_down", "key": "D"}
+{"t": 67609.7988574, "type": "key_up", "key": "S"}
+{"t": 67609.8838574, "type": "key_up", "key": "D"}
+{"t": 67624.6998574, "type": "controller-connected", "controller": 0, "name": "Open Stick Community GP2040-CE (PS4)"}
+{"t": 67674.1900208, "type": "controller-connected", "controller": 0, "name": "Open Stick Community GP2040-CE (PS4)"}
+{"t": 67674.2330208, "type": "axis_direction", "controller": 0, "axis": 2, "direction": 0}
+{"t": 67674.2330208, "type": "axis_direction", "controller": 0, "axis": 0, "direction": 0}
+{"t": 67674.2330208, "type": "axis_direction", "controller": 0, "axis": 1, "direction": 0}
+{"t": 67674.2330208, "type": "axis_direction", "controller": 0, "axis": 3, "direction": 0}
+{"t": 67696.3919617, "type": "controller-connected", "controller": 0, "name": "Open Stick Community GP2040-CE (PS4)"}
+{"t": 67696.44296170001, "type": "axis_direction", "controller": 0, "axis": 2, "direction": 0}
+{"t": 67696.44296170001, "type": "axis_direction", "controller": 0, "axis": 3, "direction": 0}
+{"t": 67696.44296170001, "type": "axis_direction", "controller": 0, "axis": 0, "direction": 0}
+{"t": 67696.44296170001, "type": "axis_direction", "controller": 0, "axis": 1, "direction": 0}
+{"t": 67697.45796170001, "type": "button-down", "controller": 0, "button": 2}
+{"t": 67723.3743499, "type": "controller-connected", "controller": 0, "name": "Open Stick Community GP2040-CE (PS4)"}
+{"t": 67723.41834989999, "type": "axis_direction", "controller": 0, "axis": 2, "direction": 0}
+{"t": 67723.41834989999, "type": "axis_direction", "controller": 0, "axis": 0, "direction": 0}
+{"t": 67723.41834989999, "type": "axis_direction", "controller": 0, "axis": 1, "direction": 0}
+{"t": 67723.41834989999, "type": "axis_direction", "controller": 0, "axis": 3, "direction": 0}
+{"t": 67724.0063499, "type": "button-down", "controller": 0, "button": 2}
+{"t": 67724.3333499, "type": "button-up", "controller": 0, "button": 2}
+{"t": 67724.3333499, "type": "button-down", "controller": 0, "button": 3}
+{"t": 67724.53134989999, "type": "button-up", "controller": 0, "button": 3}
+{"t": 67724.7083499, "type": "button-down", "controller": 0, "button": 0}
+{"t": 67724.7083499, "type": "button-up", "controller": 0, "button": 0}
+{"t": 67724.8963499, "type": "button-down", "controller": 0, "button": 1}
+{"t": 67725.0873499, "type": "button-up", "controller": 0, "button": 1}
+{"t": 67725.2823499, "type": "button-down", "controller": 0, "button": 2}
+{"t": 67725.4623499, "type": "button-up", "controller": 0, "button": 2}
+{"t": 67725.4623499, "type": "button-down", "controller": 0, "button": 1}
+{"t": 67725.6403499, "type": "button-up", "controller": 0, "button": 1}
+{"t": 67766.4970583, "type": "controller-connected", "controller": 0, "name": "Open Stick Community GP2040-CE (PS4)"}
+{"t": 67766.5350583, "type": "button-down", "controller": 0, "button": 12}
+{"t": 67766.5350583, "type": "button-down", "controller": 0, "button": 13}
+{"t": 67766.99105829999, "type": "axis_direction", "controller": 0, "axis": 0, "direction": 0}
+{"t": 67766.99105829999, "type": "axis_direction", "controller": 0, "axis": 1, "direction": 0}
+{"t": 67766.99105829999, "type": "axis_direction", "controller": 0, "axis": 2, "direction": 0}
+{"t": 67766.99105829999, "type": "axis_direction", "controller": 0, "axis": 3, "direction": 0}
+{"t": 67767.07105829999, "type": "button-up", "controller": 0, "button": 12}
+{"t": 67767.07105829999, "type": "button-up", "controller": 0, "button": 13}
+{"t": 67767.69205829999, "type": "button-down", "controller": 0, "button": 12}
+{"t": 67767.9930583, "type": "button-down", "controller": 0, "button": 13}
+{"t": 67768.0280583, "type": "button-up", "controller": 0, "button": 13}
+{"t": 67768.0280583, "type": "button-down", "controller": 0, "button": 13}
+{"t": 67768.0280583, "type": "button-up", "controller": 0, "button": 13}
+{"t": 67768.0500583, "type": "button-down", "controller": 0, "button": 13}
+{"t": 67769.1600583, "type": "key_down", "key": "Escape"}
+{"t": 67769.27105829999, "type": "key_up", "key": "Escape"}
+{"t": 67770.13805829998, "type": "key_down", "key": "Left Ctrl"}
+{"t": 67770.31305829999, "type": "key_up", "key": "Left Ctrl"}
+{"t": 67771.18105829999, "type": "key_down", "key": "Left Alt"}
+{"t": 67779.5316063, "type": "controller-connected", "controller": 0, "name": "Open Stick Community GP2040-CE (PS4)"}
+{"t": 67779.5656063, "type": "button-down", "controller": 0, "button": 12}
+{"t": 67779.5656063, "type": "button-down", "controller": 0, "button": 13}
+{"t": 67779.6196063, "type": "axis_direction", "controller": 0, "axis": 0, "direction": 0}
+{"t": 67779.6196063, "type": "axis_direction", "controller": 0, "axis": 1, "direction": 0}
+{"t": 67779.6196063, "type": "axis_direction", "controller": 0, "axis": 2, "direction": 0}
+{"t": 67779.6196063, "type": "axis_direction", "controller": 0, "axis": 3, "direction": 0}
+{"t": 67780.9306063, "type": "button-up", "controller": 0, "button": 13}
+{"t": 67781.3856063, "type": "button-up", "controller": 0, "button": 12}
+{"t": 67781.6216063, "type": "button-down", "controller": 0, "button": 12}
+{"t": 67781.84660630001, "type": "button-up", "controller": 0, "button": 12}
+{"t": 67782.0946063, "type": "button-down", "controller": 0, "button": 12}
+{"t": 67782.3166063, "type": "button-up", "controller": 0, "button": 12}
+{"t": 67782.5506063, "type": "button-down", "controller": 0, "button": 13}
+{"t": 67782.7916063, "type": "button-up", "controller": 0, "button": 13}
+{"t": 67782.7916063, "type": "button-down", "controller": 0, "button": 13}
+{"t": 67783.0216063, "type": "button-up", "controller": 0, "button": 13}
+{"t": 67783.0216063, "type": "button-down", "controller": 0, "button": 12}
+{"t": 67783.2736063, "type": "button-up", "controller": 0, "button": 12}
+{"t": 67783.5036063, "type": "button-down", "controller": 0, "button": 11}
+{"t": 67783.7296063, "type": "button-down", "controller": 0, "button": 12}
+{"t": 67783.7296063, "type": "button-up", "controller": 0, "button": 11}
+{"t": 67783.9736063, "type": "button-up", "controller": 0, "button": 12}
+{"t": 67783.9736063, "type": "button-down", "controller": 0, "button": 11}
+{"t": 67783.9736063, "type": "button-down", "controller": 0, "button": 14}
+{"t": 67783.9736063, "type": "button-up", "controller": 0, "button": 11}
+{"t": 67784.2296063, "type": "button-up", "controller": 0, "button": 14}
+{"t": 67920.0635601, "type": "controller-connected", "controller": 0, "name": "Open Stick Community GP2040-CE (PS4)"}
+{"t": 67920.82956009998, "type": "axis_direction", "controller": 0, "axis": 2, "direction": 0}
+{"t": 67920.82956009998, "type": "axis_direction", "controller": 0, "axis": 3, "direction": 0}
+{"t": 67920.82956009998, "type": "axis_direction", "controller": 0, "axis": 0, "direction": 0}
+{"t": 67920.82956009998, "type": "axis_direction", "controller": 0, "axis": 1, "direction": 0}
+{"t": 67921.55356009999, "type": "button-down", "controller": 0, "button": 2}
+{"t": 67921.55356009999, "type": "button-up", "controller": 0, "button": 2}
+{"t": 67921.90156009998, "type": "button-down", "controller": 0, "button": 12}
+{"t": 67922.26656009999, "type": "button-up", "controller": 0, "button": 12}
+{"t": 67922.94856009999, "type": "button-down", "controller": 0, "button": 13}
+{"t": 67922.94856009999, "type": "button-down", "controller": 0, "button": 11}
+{"t": 67923.32256009999, "type": "button-up", "controller": 0, "button": 11}
+{"t": 67923.32256009999, "type": "button-up", "controller": 0, "button": 13}
+{"t": 68022.1945396, "type": "controller-connected", "controller": 0, "name": "Open Stick Community GP2040-CE (PS4)"}
+{"t": 68023.3525396, "type": "axis_direction", "controller": 0, "axis": 2, "direction": 0}
+{"t": 68023.3525396, "type": "axis_direction", "controller": 0, "axis": 3, "direction": 0}
+{"t": 68023.3525396, "type": "axis_direction", "controller": 0, "axis": 0, "direction": 0}
+{"t": 68023.3525396, "type": "axis_direction", "controller": 0, "axis": 1, "direction": 0}
+{"t": 68024.0525396, "type": "button-down", "controller": 0, "button": 7}
+{"t": 68024.0525396, "type": "button-up", "controller": 0, "button": 7}
+{"t": 68025.4145396, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68026.05753959999, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68027.9785396, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68028.7295396, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68029.4155396, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68030.0715396, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68030.7005396, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68031.3275396, "type": "button-down", "controller": 0, "button": 12}
+{"t": 68031.3275396, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68033.2915396, "type": "button-up", "controller": 0, "button": 12}
+{"t": 68033.2915396, "type": "button-down", "controller": 0, "button": 11}
+{"t": 68034.5305396, "type": "button-up", "controller": 0, "button": 11}
+{"t": 68034.5305396, "type": "button-down", "controller": 0, "button": 9}
+{"t": 68036.4495396, "type": "button-up", "controller": 0, "button": 9}
+{"t": 68037.0905396, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 0}
+{"t": 68037.0905396, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 1}
+{"t": 68037.71253959999, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 0}
+{"t": 68038.3595396, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68038.3595396, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68039.6755396, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 1}
+{"t": 68039.6755396, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68040.2985396, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 0}
+{"t": 68040.2985396, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68040.2985396, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68042.5735396, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68043.2325396, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68043.8935396, "type": "button-down", "controller": 0, "button": 1}
+{"t": 68044.5375396, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68044.5375396, "type": "button-up", "controller": 0, "button": 1}
+{"t": 68044.5375396, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68045.1685396, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68045.1685396, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68046.5445396, "type": "button-down", "controller": 0, "button": 0}
+{"t": 68046.5445396, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68046.5445396, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68046.5445396, "type": "button-up", "controller": 0, "button": 0}
+{"t": 68049.72453959999, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68050.3865396, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68051.0605396, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68053.6015396, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68053.6015396, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68054.2565396, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68055.3355396, "type": "key_down", "key": "Left Alt"}
+{"t": 68055.33753959999, "type": "key_up", "key": "Left Alt"}
+{"t": 68056.0785396, "type": "key_down", "key": "Left Alt"}
+{"t": 68056.14453959999, "type": "key_up", "key": "Left Alt"}
+{"t": 68095.5185396, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68096.9695396, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68134.61453959999, "type": "key_down", "key": "Left Alt"}
+{"t": 68134.6845396, "type": "key_up", "key": "Left Alt"}
+{"t": 68149.7429754, "type": "controller-connected", "controller": 0, "name": "Open Stick Community GP2040-CE (PS4)"}
+{"t": 68150.38897540001, "type": "axis_direction", "controller": 0, "axis": 0, "direction": 0}
+{"t": 68150.38897540001, "type": "axis_direction", "controller": 0, "axis": 1, "direction": 0}
+{"t": 68150.38897540001, "type": "axis_direction", "controller": 0, "axis": 2, "direction": 0}
+{"t": 68150.38897540001, "type": "axis_direction", "controller": 0, "axis": 3, "direction": 0}
+{"t": 68150.61297540001, "type": "button-down", "controller": 0, "button": 7}
+{"t": 68150.70497540002, "type": "button-up", "controller": 0, "button": 7}
+{"t": 68151.21897540001, "type": "button-down", "controller": 0, "button": 7}
+{"t": 68151.34797540001, "type": "button-up", "controller": 0, "button": 7}
+{"t": 68152.31297540001, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68152.42397540002, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68152.5199754, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68152.5959754, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68152.74997540002, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68153.10097540001, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68153.17397540002, "type": "button-down", "controller": 0, "button": 0}
+{"t": 68153.32397540001, "type": "button-up", "controller": 0, "button": 0}
+{"t": 68153.35997540002, "type": "button-down", "controller": 0, "button": 1}
+{"t": 68153.49097540001, "type": "button-up", "controller": 0, "button": 1}
+{"t": 68153.52797540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68153.52797540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68153.63997540002, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68153.99597540002, "type": "button-down", "controller": 0, "button": 12}
+{"t": 68154.36597540001, "type": "button-up", "controller": 0, "button": 12}
+{"t": 68154.40397540001, "type": "button-down", "controller": 0, "button": 11}
+{"t": 68154.69997540001, "type": "button-up", "controller": 0, "button": 11}
+{"t": 68154.69997540001, "type": "button-down", "controller": 0, "button": 12}
+{"t": 68155.11397540002, "type": "button-up", "controller": 0, "button": 12}
+{"t": 68155.13197540001, "type": "button-down", "controller": 0, "button": 11}
+{"t": 68155.15297540001, "type": "button-up", "controller": 0, "button": 11}
+{"t": 68155.17197540001, "type": "button-down", "controller": 0, "button": 8}
+{"t": 68155.41597540001, "type": "button-up", "controller": 0, "button": 8}
+{"t": 68155.5839754, "type": "button-down", "controller": 0, "button": 7}
+{"t": 68155.82397540001, "type": "button-up", "controller": 0, "button": 7}
+{"t": 68155.89697540001, "type": "button-down", "controller": 0, "button": 8}
+{"t": 68156.02697540002, "type": "button-up", "controller": 0, "button": 8}
+{"t": 68156.15797540001, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68156.34397540001, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68156.56397540001, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68156.65697540001, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68156.89697540001, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68157.06397540001, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68157.10097540001, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68157.24997540002, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68157.26897540002, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68157.45497540002, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68157.63997540002, "type": "button-down", "controller": 0, "button": 0}
+{"t": 68157.80697540002, "type": "button-up", "controller": 0, "button": 0}
+{"t": 68158.06797540002, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68158.17797540002, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68158.17797540002, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68158.34497540002, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68158.36397540002, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68158.49197540001, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68158.56597540001, "type": "button-down", "controller": 0, "button": 0}
+{"t": 68158.6599754, "type": "button-down", "controller": 0, "button": 1}
+{"t": 68158.67797540002, "type": "button-up", "controller": 0, "button": 0}
+{"t": 68158.7889754, "type": "button-down", "controller": 0, "button": 0}
+{"t": 68158.7889754, "type": "button-up", "controller": 0, "button": 1}
+{"t": 68158.86297540001, "type": "button-up", "controller": 0, "button": 0}
+{"t": 68158.90097540001, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68158.91997540001, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68158.97597540001, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68158.99397540001, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68158.99397540001, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68159.06797540002, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68159.08697540002, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68159.10497540001, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68159.14197540001, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68159.16097540001, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68159.16097540001, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68159.19697540002, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68159.27097540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68159.27097540001, "type": "button-down", "controller": 0, "button": 1}
+{"t": 68159.32897540001, "type": "button-down", "controller": 0, "button": 0}
+{"t": 68159.34797540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68159.38497540001, "type": "button-up", "controller": 0, "button": 1}
+{"t": 68159.4399754, "type": "button-up", "controller": 0, "button": 0}
+{"t": 68159.46097540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68159.49997540002, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68159.49997540002, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68159.51897540002, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68159.55497540001, "type": "button-down", "controller": 0, "button": 1}
+{"t": 68159.6489754, "type": "button-down", "controller": 0, "button": 12}
+{"t": 68159.66697540002, "type": "button-up", "controller": 0, "button": 1}
+{"t": 68159.70297540001, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68159.70297540001, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68159.72197540001, "type": "button-down", "controller": 0, "button": 0}
+{"t": 68159.8149754, "type": "button-up", "controller": 0, "button": 12}
+{"t": 68159.85197540002, "type": "button-up", "controller": 0, "button": 0}
+{"t": 68159.85197540002, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68159.85197540002, "type": "button-down", "controller": 0, "button": 1}
+{"t": 68159.94297540002, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68159.9629754, "type": "button-down", "controller": 0, "button": 0}
+{"t": 68159.9629754, "type": "button-up", "controller": 0, "button": 1}
+{"t": 68160.0389754, "type": "button-up", "controller": 0, "button": 0}
+{"t": 68160.07797540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68160.07797540001, "type": "button-down", "controller": 0, "button": 1}
+{"t": 68160.15297540001, "type": "button-down", "controller": 0, "button": 0}
+{"t": 68160.15297540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68160.17297540001, "type": "button-up", "controller": 0, "button": 1}
+{"t": 68160.2279754, "type": "button-up", "controller": 0, "button": 0}
+{"t": 68160.26497540002, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68160.26497540002, "type": "button-down", "controller": 0, "button": 12}
+{"t": 68160.28397540002, "type": "button-down", "controller": 0, "button": 1}
+{"t": 68160.3569754, "type": "button-up", "controller": 0, "button": 1}
+{"t": 68160.3569754, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68160.44997540001, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68160.44997540001, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68160.44997540001, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68160.44997540001, "type": "button-up", "controller": 0, "button": 12}
+{"t": 68160.4859754, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68160.50397540002, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68160.52297540002, "type": "button-down", "controller": 0, "button": 11}
+{"t": 68160.57797540001, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68160.6149754, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68160.63497540001, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68160.65497540002, "type": "button-up", "controller": 0, "button": 11}
+{"t": 68160.67397540002, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68160.67397540002, "type": "button-down", "controller": 0, "button": 12}
+{"t": 68160.69197540001, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68160.69197540001, "type": "button-down", "controller": 0, "button": 0}
+{"t": 68160.76497540002, "type": "button-up", "controller": 0, "button": 0}
+{"t": 68160.8189754, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68160.85597540002, "type": "button-down", "controller": 0, "button": 13}
+{"t": 68160.85597540002, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68160.87497540002, "type": "button-up", "controller": 0, "button": 12}
+{"t": 68160.87497540002, "type": "button-up", "controller": 0, "button": 13}
+{"t": 68160.89397540002, "type": "button-down", "controller": 0, "button": 13}
+{"t": 68160.91297540002, "type": "button-down", "controller": 0, "button": 11}
+{"t": 68160.94997540001, "type": "button-down", "controller": 0, "button": 0}
+{"t": 68160.94997540001, "type": "button-up", "controller": 0, "button": 13}
+{"t": 68160.94997540001, "type": "button-up", "controller": 0, "button": 0}
+{"t": 68161.04097540001, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68161.04097540001, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68161.05997540001, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68161.0959754, "type": "button-down", "controller": 0, "button": 14}
+{"t": 68161.0959754, "type": "button-up", "controller": 0, "button": 11}
+{"t": 68161.1149754, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68161.13297540002, "type": "button-up", "controller": 0, "button": 14}
+{"t": 68161.13297540002, "type": "button-down", "controller": 0, "button": 12}
+{"t": 68161.20697540001, "type": "button-down", "controller": 0, "button": 13}
+{"t": 68161.22597540001, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68161.26397540001, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68161.26397540001, "type": "button-up", "controller": 0, "button": 12}
+{"t": 68161.2999754, "type": "button-down", "controller": 0, "button": 11}
+{"t": 68161.33697540002, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68161.33697540002, "type": "button-up", "controller": 0, "button": 13}
+{"t": 68161.35497540001, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68161.37297540001, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68161.40897540002, "type": "button-down", "controller": 0, "button": 14}
+{"t": 68161.40897540002, "type": "button-up", "controller": 0, "button": 11}
+{"t": 68161.4289754, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68161.48497540002, "type": "button-down", "controller": 0, "button": 12}
+{"t": 68161.48497540002, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68161.50397540002, "type": "button-up", "controller": 0, "button": 14}
+{"t": 68161.52297540002, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68161.57797540001, "type": "button-down", "controller": 0, "button": 13}
+{"t": 68161.57797540001, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68161.5959754, "type": "button-down", "controller": 0, "button": 0}
+{"t": 68161.59697540001, "type": "button-up", "controller": 0, "button": 12}
+{"t": 68161.61597540001, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68161.65197540002, "type": "button-up", "controller": 0, "button": 0}
+{"t": 68161.65197540002, "type": "button-down", "controller": 0, "button": 11}
+{"t": 68161.6709754, "type": "button-up", "controller": 0, "button": 13}
+{"t": 68161.72697540002, "type": "button-down", "controller": 0, "button": 14}
+{"t": 68161.72697540002, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68161.74597540002, "type": "button-up", "controller": 0, "button": 11}
+{"t": 68161.74597540002, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68161.7659754, "type": "button-down", "controller": 0, "button": 1}
+{"t": 68161.80297540002, "type": "button-down", "controller": 0, "button": 12}
+{"t": 68161.83997540001, "type": "button-up", "controller": 0, "button": 14}
+{"t": 68161.83997540001, "type": "button-down", "controller": 0, "button": 0}
+{"t": 68161.8759754, "type": "button-up", "controller": 0, "button": 1}
+{"t": 68161.91297540002, "type": "button-down", "controller": 0, "button": 13}
+{"t": 68161.91297540002, "type": "button-up", "controller": 0, "button": 12}
+{"t": 68161.94897540001, "type": "button-up", "controller": 0, "button": 0}
+{"t": 68161.9669754, "type": "button-down", "controller": 0, "button": 11}
+{"t": 68161.98497540002, "type": "button-up", "controller": 0, "button": 13}
+{"t": 68162.04097540001, "type": "button-down", "controller": 0, "button": 14}
+{"t": 68162.07897540001, "type": "button-up", "controller": 0, "button": 11}
+{"t": 68162.13297540002, "type": "button-down", "controller": 0, "button": 12}
+{"t": 68162.15197540002, "type": "button-up", "controller": 0, "button": 14}
+{"t": 68162.2279754, "type": "button-down", "controller": 0, "button": 13}
+{"t": 68162.26497540002, "type": "button-up", "controller": 0, "button": 12}
+{"t": 68162.30297540002, "type": "button-down", "controller": 0, "button": 11}
+{"t": 68162.32197540002, "type": "button-up", "controller": 0, "button": 13}
+{"t": 68162.37697540001, "type": "button-down", "controller": 0, "button": 14}
+{"t": 68162.4329754, "type": "button-up", "controller": 0, "button": 11}
+{"t": 68162.46997540002, "type": "button-down", "controller": 0, "button": 12}
+{"t": 68162.48797540001, "type": "button-up", "controller": 0, "button": 14}
+{"t": 68162.56297540001, "type": "button-down", "controller": 0, "button": 13}
+{"t": 68162.5989754, "type": "button-up", "controller": 0, "button": 12}
+{"t": 68162.63597540002, "type": "button-down", "controller": 0, "button": 11}
+{"t": 68162.65497540002, "type": "button-up", "controller": 0, "button": 13}
+{"t": 68162.72897540001, "type": "button-down", "controller": 0, "button": 14}
+{"t": 68162.76697540001, "type": "button-up", "controller": 0, "button": 11}
+{"t": 68162.82097540001, "type": "button-down", "controller": 0, "button": 12}
+{"t": 68162.82097540001, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68162.83997540001, "type": "button-up", "controller": 0, "button": 14}
+{"t": 68162.8989754, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68162.91897540001, "type": "button-down", "controller": 0, "button": 13}
+{"t": 68162.93797540001, "type": "button-down", "controller": 0, "button": 0}
+{"t": 68162.97497540001, "type": "button-up", "controller": 0, "button": 12}
+{"t": 68163.0119754, "type": "button-up", "controller": 0, "button": 0}
+{"t": 68163.02997540002, "type": "button-down", "controller": 0, "button": 11}
+{"t": 68163.02997540002, "type": "button-up", "controller": 0, "button": 13}
+{"t": 68163.08497540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68163.10397540001, "type": "button-down", "controller": 0, "button": 14}
+{"t": 68163.12297540001, "type": "button-down", "controller": 0, "button": 1}
+{"t": 68163.1409754, "type": "button-up", "controller": 0, "button": 11}
+{"t": 68163.19597540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68163.19597540001, "type": "button-up", "controller": 0, "button": 1}
+{"t": 68163.21497540001, "type": "button-up", "controller": 0, "button": 14}
+{"t": 68163.2699754, "type": "button-down", "controller": 0, "button": 12}
+{"t": 68163.28797540002, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68163.28797540002, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68163.32397540001, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68163.3419754, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68163.35997540002, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68163.35997540002, "type": "button-up", "controller": 0, "button": 12}
+{"t": 68163.41697540002, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68163.45297540001, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68163.45297540001, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68163.52797540001, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68163.52797540001, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68163.52797540001, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68163.58497540001, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68163.60197540002, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68163.60197540002, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68163.6789754, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68163.69697540002, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68163.69697540002, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68163.75197540001, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68163.80697540002, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68163.8799754, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68163.91597540001, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68163.97197540001, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68163.97197540001, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68164.04897540002, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68164.04897540002, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68164.10497540001, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68164.14197540001, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68164.1979754, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68164.27297540002, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68164.51297540001, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68164.58697540002, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68164.6599754, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68164.71497540001, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68164.80697540002, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68164.88197540001, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68164.95597540001, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68165.0119754, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68165.08497540001, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68165.16097540001, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68165.23697540001, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68165.27297540002, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68165.3649754, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68165.4369754, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68165.7359754, "type": "button-down", "controller": 0, "button": 10}
+{"t": 68165.77197540001, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68165.9779754, "type": "button-down", "controller": 0, "button": 3}
+{"t": 68166.10597540002, "type": "button-up", "controller": 0, "button": 10}
+{"t": 68166.10597540002, "type": "button-down", "controller": 0, "button": 2}
+{"t": 68166.16297540002, "type": "button-up", "controller": 0, "button": 3}
+{"t": 68166.2549754, "type": "button-up", "controller": 0, "button": 2}
+{"t": 68166.32997540002, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68166.59097540002, "type": "button-down", "controller": 0, "button": 1}
+{"t": 68166.68597540002, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68166.70497540002, "type": "button-down", "controller": 0, "button": 0}
+{"t": 68166.77997540002, "type": "button-up", "controller": 0, "button": 1}
+{"t": 68166.8719754, "type": "button-up", "controller": 0, "button": 0}
+{"t": 68166.89197540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68167.25797540002, "type": "button-down", "controller": 0, "button": 1}
+{"t": 68167.48297540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68167.50297540001, "type": "button-up", "controller": 0, "button": 1}
+{"t": 68167.63097540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68168.16297540002, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68168.36397540002, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68168.47497540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68168.56997540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68168.84997540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68168.96097540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68169.0349754, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68169.10997540002, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68169.18197540002, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68169.36697540001, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 0}
+{"t": 68169.36697540001, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 1}
+{"t": 68169.64597540001, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 0}
+{"t": 68169.75797540002, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 1}
+{"t": 68169.83297540002, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 0}
+{"t": 68169.86897540001, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 1}
+{"t": 68169.96197540002, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 0}
+{"t": 68170.03697540001, "type": "button-down", "controller": 0, "button": 1}
+{"t": 68170.1109754, "type": "button-up", "controller": 0, "button": 1}
+{"t": 68170.23897540002, "type": "button-down", "controller": 0, "button": 1}
+{"t": 68170.31397540001, "type": "button-up", "controller": 0, "button": 1}
+{"t": 68170.33197540001, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 1}
+{"t": 68170.42597540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68170.44497540001, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 0}
+{"t": 68170.5009754, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68170.53797540002, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 1}
+{"t": 68170.5919754, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68170.60997540002, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 0}
+{"t": 68170.66497540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68170.68397540001, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 1}
+{"t": 68170.75697540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68170.75697540001, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 0}
+{"t": 68170.79497540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68170.83097540001, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 1}
+{"t": 68170.88897540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68170.88897540001, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 0}
+{"t": 68170.92597540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68170.9629754, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 1}
+{"t": 68171.0199754, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68171.0199754, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 0}
+{"t": 68171.07497540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68171.09397540001, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 1}
+{"t": 68171.1489754, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 1}
+{"t": 68171.18597540002, "type": "axis_direction", "controller": 0, "axis": 4, "direction": 0}
+{"t": 68171.20397540001, "type": "axis_direction", "controller": 0, "axis": 5, "direction": 0}
+{"t": 68187.7929754, "type": "button-down", "controller": 0, "button": 11}
+{"t": 68187.7929754, "type": "button-up", "controller": 0, "button": 11}
+{"t": 68187.81397540001, "type": "button-down", "controller": 0, "button": 11}
+{"t": 68187.89297540001, "type": "button-up", "controller": 0, "button": 11}
+{"t": 68188.7739754, "type": "controller-connected", "controller": 1, "name": "DualSense Wireless Controller"}
+{"t": 68189.00897540001, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 0}
+{"t": 68189.3459754, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68189.36597540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": -1}
+{"t": 68189.4969754, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68189.68397540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 1}
+{"t": 68189.83497540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68190.0539754, "type": "axis_direction", "controller": 1, "axis": 1, "direction": -1}
+{"t": 68190.21497540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68190.39297540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 1}
+{"t": 68190.81697540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68190.83897540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": -1}
+{"t": 68190.85897540001, "type": "axis_direction", "controller": 1, "axis": 0, "direction": -1}
+{"t": 68190.94097540001, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 0}
+{"t": 68192.48697540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68192.51097540002, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 1}
+{"t": 68193.10597540002, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68193.12897540002, "type": "axis_direction", "controller": 1, "axis": 1, "direction": -1}
+{"t": 68193.12897540002, "type": "axis_direction", "controller": 1, "axis": 0, "direction": -1}
+{"t": 68193.3569754, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 0}
+{"t": 68195.68497540001, "type": "axis_direction", "controller": 1, "axis": 0, "direction": -1}
+{"t": 68196.0429754, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 0}
+{"t": 68196.68897540001, "type": "axis_direction", "controller": 1, "axis": 0, "direction": -1}
+{"t": 68197.9589754, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68198.4779754, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 1}
+{"t": 68198.99997540002, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 0}
+{"t": 68199.0689754, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 1}
+{"t": 68199.18397540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68199.20797540002, "type": "axis_direction", "controller": 1, "axis": 1, "direction": -1}
+{"t": 68199.29497540001, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 0}
+{"t": 68199.33597540001, "type": "axis_direction", "controller": 1, "axis": 0, "direction": -1}
+{"t": 68199.42397540002, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68199.4479754, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 1}
+{"t": 68199.5349754, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 0}
+{"t": 68199.57797540001, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 1}
+{"t": 68199.6409754, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68199.66197540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": -1}
+{"t": 68199.70397540001, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 0}
+{"t": 68199.72597540001, "type": "axis_direction", "controller": 1, "axis": 0, "direction": -1}
+{"t": 68199.8149754, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68199.85797540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 1}
+{"t": 68199.9779754, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 0}
+{"t": 68200.0009754, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 1}
+{"t": 68200.06797540002, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68200.09297540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": -1}
+{"t": 68200.16197540001, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 0}
+{"t": 68200.20597540001, "type": "axis_direction", "controller": 1, "axis": 0, "direction": -1}
+{"t": 68200.29497540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68200.3189754, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 1}
+{"t": 68200.41297540002, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 0}
+{"t": 68200.45997540001, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 1}
+{"t": 68200.55197540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68200.60097540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": -1}
+{"t": 68200.6709754, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 0}
+{"t": 68200.74397540001, "type": "axis_direction", "controller": 1, "axis": 0, "direction": -1}
+{"t": 68200.95097540002, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68200.99497540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 1}
+{"t": 68201.1179754, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 0}
+{"t": 68201.1639754, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 1}
+{"t": 68201.20997540001, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 0}
+{"t": 68201.20997540001, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68201.49197540001, "type": "axis_direction", "controller": 1, "axis": 5, "direction": 0}
+{"t": 68201.5159754, "type": "axis_direction", "controller": 1, "axis": 5, "direction": 1}
+{"t": 68201.93497540001, "type": "axis_direction", "controller": 1, "axis": 4, "direction": 0}
+{"t": 68201.93497540001, "type": "axis_direction", "controller": 1, "axis": 4, "direction": 1}
+{"t": 68201.95997540001, "type": "axis_direction", "controller": 1, "axis": 5, "direction": 0}
+{"t": 68202.28197540001, "type": "axis_direction", "controller": 1, "axis": 5, "direction": 1}
+{"t": 68202.28197540001, "type": "axis_direction", "controller": 1, "axis": 4, "direction": 0}
+{"t": 68202.55497540001, "type": "axis_direction", "controller": 1, "axis": 4, "direction": 1}
+{"t": 68202.57997540002, "type": "axis_direction", "controller": 1, "axis": 5, "direction": 0}
+{"t": 68202.8529754, "type": "axis_direction", "controller": 1, "axis": 4, "direction": 0}
+{"t": 68202.8529754, "type": "axis_direction", "controller": 1, "axis": 5, "direction": 1}
+{"t": 68203.00797540002, "type": "axis_direction", "controller": 1, "axis": 5, "direction": 0}
+{"t": 68203.16497540001, "type": "button-down", "controller": 1, "button": 10}
+{"t": 68203.44597540001, "type": "button-up", "controller": 1, "button": 10}
+{"t": 68203.46897540001, "type": "button-down", "controller": 1, "button": 9}
+{"t": 68203.68397540001, "type": "button-down", "controller": 1, "button": 10}
+{"t": 68203.77497540001, "type": "button-up", "controller": 1, "button": 9}
+{"t": 68203.99097540001, "type": "button-down", "controller": 1, "button": 9}
+{"t": 68204.0119754, "type": "button-up", "controller": 1, "button": 10}
+{"t": 68204.16197540001, "type": "button-up", "controller": 1, "button": 9}
+{"t": 68204.26297540001, "type": "axis_direction", "controller": 1, "axis": 2, "direction": 0}
+{"t": 68204.2849754, "type": "axis_direction", "controller": 1, "axis": 3, "direction": 0}
+{"t": 68204.30697540002, "type": "axis_direction", "controller": 1, "axis": 2, "direction": 1}
+{"t": 68204.38997540002, "type": "axis_direction", "controller": 1, "axis": 3, "direction": -1}
+{"t": 68204.5049754, "type": "axis_direction", "controller": 1, "axis": 2, "direction": 0}
+{"t": 68204.52897540001, "type": "axis_direction", "controller": 1, "axis": 2, "direction": -1}
+{"t": 68204.55197540001, "type": "axis_direction", "controller": 1, "axis": 3, "direction": 0}
+{"t": 68204.57597540002, "type": "axis_direction", "controller": 1, "axis": 3, "direction": 1}
+{"t": 68204.62297540001, "type": "axis_direction", "controller": 1, "axis": 2, "direction": 0}
+{"t": 68204.64697540001, "type": "axis_direction", "controller": 1, "axis": 2, "direction": 1}
+{"t": 68204.69297540002, "type": "axis_direction", "controller": 1, "axis": 3, "direction": 0}
+{"t": 68204.71597540002, "type": "axis_direction", "controller": 1, "axis": 3, "direction": -1}
+{"t": 68204.76297540001, "type": "axis_direction", "controller": 1, "axis": 2, "direction": 0}
+{"t": 68204.81297540001, "type": "axis_direction", "controller": 1, "axis": 2, "direction": -1}
+{"t": 68204.85797540001, "type": "axis_direction", "controller": 1, "axis": 3, "direction": 0}
+{"t": 68204.90297540001, "type": "axis_direction", "controller": 1, "axis": 3, "direction": 1}
+{"t": 68204.92597540001, "type": "axis_direction", "controller": 1, "axis": 2, "direction": 0}
+{"t": 68204.94997540001, "type": "axis_direction", "controller": 1, "axis": 2, "direction": 1}
+{"t": 68204.94997540001, "type": "axis_direction", "controller": 1, "axis": 3, "direction": 0}
+{"t": 68204.97497540001, "type": "axis_direction", "controller": 1, "axis": 2, "direction": 0}
+{"t": 68204.97497540001, "type": "axis_direction", "controller": 1, "axis": 2, "direction": -1}
+{"t": 68204.99897540001, "type": "axis_direction", "controller": 1, "axis": 2, "direction": 0}
+{"t": 68205.22897540001, "type": "button-down", "controller": 1, "button": 0}
+{"t": 68205.47497540001, "type": "button-up", "controller": 1, "button": 0}
+{"t": 68205.58597540001, "type": "button-down", "controller": 1, "button": 2}
+{"t": 68205.7699754, "type": "button-up", "controller": 1, "button": 2}
+{"t": 68205.8419754, "type": "button-down", "controller": 1, "button": 3}
+{"t": 68206.02897540001, "type": "button-up", "controller": 1, "button": 3}
+{"t": 68206.11897540001, "type": "button-down", "controller": 1, "button": 1}
+{"t": 68206.37497540002, "type": "button-up", "controller": 1, "button": 1}
+{"t": 68206.45697540001, "type": "button-down", "controller": 1, "button": 0}
+{"t": 68206.58597540001, "type": "button-up", "controller": 1, "button": 0}
+{"t": 68206.74597540002, "type": "axis_direction", "controller": 1, "axis": 5, "direction": 1}
+{"t": 68206.96997540002, "type": "button-down", "controller": 1, "button": 9}
+{"t": 68206.96997540002, "type": "axis_direction", "controller": 1, "axis": 5, "direction": 0}
+{"t": 68207.01697540001, "type": "button-down", "controller": 1, "button": 10}
+{"t": 68207.05997540001, "type": "button-up", "controller": 1, "button": 9}
+{"t": 68207.10597540002, "type": "button-up", "controller": 1, "button": 10}
+{"t": 68207.20097540002, "type": "button-down", "controller": 1, "button": 10}
+{"t": 68207.2959754, "type": "button-up", "controller": 1, "button": 10}
+{"t": 68207.32097540001, "type": "button-down", "controller": 1, "button": 9}
+{"t": 68207.40697540001, "type": "button-down", "controller": 1, "button": 0}
+{"t": 68207.40697540001, "type": "axis_direction", "controller": 1, "axis": 5, "direction": 1}
+{"t": 68207.47597540001, "type": "button-up", "controller": 1, "button": 9}
+{"t": 68207.47597540001, "type": "button-down", "controller": 1, "button": 2}
+{"t": 68207.49897540001, "type": "axis_direction", "controller": 1, "axis": 4, "direction": 1}
+{"t": 68207.60497540001, "type": "button-down", "controller": 1, "button": 10}
+{"t": 68207.62797540001, "type": "button-down", "controller": 1, "button": 9}
+{"t": 68207.62797540001, "type": "button-up", "controller": 1, "button": 2}
+{"t": 68207.64997540001, "type": "button-up", "controller": 1, "button": 0}
+{"t": 68207.6939754, "type": "button-up", "controller": 1, "button": 10}
+{"t": 68207.6939754, "type": "axis_direction", "controller": 1, "axis": 5, "direction": 0}
+{"t": 68207.7399754, "type": "button-up", "controller": 1, "button": 9}
+{"t": 68207.78697540001, "type": "axis_direction", "controller": 1, "axis": 4, "direction": 0}
+{"t": 68207.96597540002, "type": "button-down", "controller": 1, "button": 8}
+{"t": 68208.09497540002, "type": "button-up", "controller": 1, "button": 8}
+{"t": 68208.23097540002, "type": "button-down", "controller": 1, "button": 7}
+{"t": 68208.3609754, "type": "button-up", "controller": 1, "button": 7}
+{"t": 68208.38497540001, "type": "button-down", "controller": 1, "button": 8}
+{"t": 68208.49397540001, "type": "button-up", "controller": 1, "button": 8}
+{"t": 68208.60097540001, "type": "button-down", "controller": 1, "button": 7}
+{"t": 68208.66997540001, "type": "button-up", "controller": 1, "button": 7}
+{"t": 68208.69297540002, "type": "button-down", "controller": 1, "button": 8}
+{"t": 68208.7619754, "type": "button-up", "controller": 1, "button": 8}
+{"t": 68208.86897540001, "type": "button-down", "controller": 1, "button": 7}
+{"t": 68208.95597540001, "type": "button-up", "controller": 1, "button": 7}
+{"t": 68209.04797540001, "type": "button-down", "controller": 1, "button": 8}
+{"t": 68209.11397540002, "type": "button-up", "controller": 1, "button": 8}
+{"t": 68210.23397540001, "type": "button-down", "controller": 0, "button": 8}
+{"t": 68210.30497540001, "type": "button-up", "controller": 0, "button": 8}
+{"t": 68210.3909754, "type": "button-down", "controller": 0, "button": 8}
+{"t": 68210.62497540002, "type": "button-up", "controller": 0, "button": 8}
+{"t": 68210.87697540001, "type": "button-down", "controller": 0, "button": 7}
+{"t": 68210.94897540001, "type": "button-up", "controller": 0, "button": 7}
+{"t": 68212.3799754, "type": "button-down", "controller": 0, "button": 7}
+{"t": 68212.48797540001, "type": "button-down", "controller": 0, "button": 8}
+{"t": 68212.53297540001, "type": "button-up", "controller": 0, "button": 7}
+{"t": 68212.59797540001, "type": "button-up", "controller": 0, "button": 8}
+{"t": 68212.6449754, "type": "button-down", "controller": 0, "button": 7}
+{"t": 68212.75897540001, "type": "button-down", "controller": 0, "button": 8}
+{"t": 68212.78397540002, "type": "button-up", "controller": 0, "button": 7}
+{"t": 68212.87497540002, "type": "button-down", "controller": 0, "button": 7}
+{"t": 68212.87497540002, "type": "button-up", "controller": 0, "button": 8}
+{"t": 68212.99197540001, "type": "button-down", "controller": 0, "button": 8}
+{"t": 68213.08597540001, "type": "button-up", "controller": 0, "button": 8}
+{"t": 68213.19897540001, "type": "button-up", "controller": 0, "button": 7}
+{"t": 68216.95797540002, "type": "controller_disconnected", "controller": 1}
+{"t": 68222.08697540002, "type": "controller-connected", "controller": 2, "name": "DualSense Wireless Controller"}
+{"t": 68239.5391893, "type": "controller-connected", "controller": 0, "name": "Open Stick Community GP2040-CE (PS4)"}
+{"t": 68239.5391893, "type": "controller-connected", "controller": 1, "name": "DualSense Wireless Controller"}
+{"t": 68241.1921893, "type": "axis_direction", "controller": 1, "axis": 2, "direction": 0}
+{"t": 68241.2421893, "type": "axis_direction", "controller": 1, "axis": 0, "direction": 0}
+{"t": 68241.2421893, "type": "axis_direction", "controller": 1, "axis": 1, "direction": 0}
+{"t": 68241.2421893, "type": "axis_direction", "controller": 1, "axis": 3, "direction": 0}
+{"t": 68241.2421893, "type": "controller_disconnected", "controller": 1}
+{"t": 68244.4821893, "type": "controller-connected", "controller": 2, "name": "DualSense Wireless Controller"}

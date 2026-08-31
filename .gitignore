@@ -1,0 +1,12 @@
+# Ignore auto-generated cache files
+__pycache__
+*.mp4
+frames/
+reference/
+*.db-shm
+*.db-wal
+
+# run download images yourself
+data/images
+
+.env
